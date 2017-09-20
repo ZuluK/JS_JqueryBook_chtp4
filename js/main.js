@@ -120,3 +120,48 @@ for (i = 0; i < arrayLength; i++){
 }
 var textEl = document.getElementById('answer8');
 textEl.textContent = msg;
+
+
+//Using While Loops
+var i = 1;//Set counter
+var msg = " ";//Message
+
+//Store  5 times table in variable
+while (i < 10){
+  msg += i + 'x 5 = ' + (i * 5) + '<br>';
+  i++;
+  document.write(msg);
+}
+
+
+//Using do while loop
+var i = 1;//Set counter to 1
+var msg = " ";//Message
+//Store 5 times table in a variable
+do {
+  msg += i + " x 5 = " + (i * 5) + '<br/>';
+  i++;
+} while (i < 1);
+document.write(msg);
+
+//Decisions & Loops
+
+var table = 3;//Unit of table
+var operator = "addition";//Type of calculation (default to addition)
+var i = 1;//Set counter to 1
+var msg = '';//Message
+
+if(operator === "addition"){//if the operator variable says addition
+  while (i < 11){//While counter is less than 11
+    msg += i + " + " + table + ' = ' + (i + table) + '<br />';//Caluculation
+    i++;//Adds one to the counter
+  }
+} else {
+  while(i < 11){
+    msg += i + " x " + table + " = " + (i * table) + '<br />';
+    i++;
+  }
+}
+//Write  the message into the page
+var el = document.getElementById('backboard');
+el.textContent = msg;
